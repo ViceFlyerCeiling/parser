@@ -1,0 +1,10 @@
+# docker-compose.yml
+version: '3'
+services:
+  scraper:
+    build: .
+    volumes:
+      - ./config:/config
+      - ./output:/output
+    environment:
+      - CAPTCHA_API_KEY=${CAPTCHA_API_KEY}
